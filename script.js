@@ -11,31 +11,31 @@ getWeatherBtn.addEventListener("click", function () {
   } else {
     weatherResults.textContent = `You choose city: ${cityName}`;
   }
-});
 
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+  fetch(apiUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("City is not founded");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const temp = data.main.temp;
+      const description = data.weather[0].description;
+      const city = data.name;
+      const iconCode = data.weather[0].icon;
 
-fetch(apiUrl)
-  .then((response) => response.json());
-  .then(data => {
-    const temp = data.main.temp; 
-    const description = data.weather[0].description; 
-    const city = data.name;
-    
-    const weatherResults = document.getElementById("weatherResults");
-    const message = `There is ${temp}°C, ${description} in ${city}.`; 
-    
-    weatherResults.innerHTML = `
+      const weatherResults = document.getElementById("weatherResults");
+      const message = `There is ${temp}°C, ${description} in ${city}.`;
+
+      weatherResults.innerHTML = `
         <p>${message}</p>
         <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="Weather icon">`;
-
-    .catch(error => {
-        console.error("Error:", error);
-        weatherResults.textContent = "Failed to retrieve weather data";
+    })
+    .catch((error) => {
+      console.error(error);
+      weatherResults.textContent = "Failed to retrieve weather data";
     });
 });
-
-
-
-
