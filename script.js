@@ -19,21 +19,23 @@ const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&ap
 fetch(apiUrl)
   .then((response) => response.json());
   .then(data => {
-    const temp = data.main.temp, 
-    data.weather[0].description, 
-    data.name});
+    const temp = data.main.temp; 
+    const description = data.weather[0].description; 
+    const city = data.name;
+    
+    const weatherResults = document.getElementById("weatherResults");
+    const message = `There is ${temp}°C, ${description} in ${city}.`; 
+    
+    weatherResults.innerHTML = `
+        <p>${message}</p>
+        <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="Weather icon">`;
 
     .catch(error => {
         console.error("Error:", error);
         weatherResults.textContent = "Failed to retrieve weather data";
     });
+});
 
 
-const weatherResults = document.getElementById("weatherResults");
-const message = `There is ${data.main.temp}°C, ${data.weather[0].description} in ${data.name}.`; 
 
-// weatherResults.textContent = message;
-weatherResults.innerHTML = `
-    <p>${message}</p>
-    <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" alt="Weather icon">
-`;
+

@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: large;
+  color: #fff;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(27, 136, 251);
+}
+
+#cityInput {
+  flex: 1;
+  padding: 20px;
+  padding: 10px;
+  border: 1px solid #e1ef20;
+}
+
+button {
+  padding: 20px;
+  border: none;
+  background: #ecde16;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
