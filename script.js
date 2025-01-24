@@ -8,8 +8,7 @@ getWeatherBtn.addEventListener("click", function () {
   const cityName = cityInput.value.trim();
   if (cityName === "") {
     weatherResults.textContent = "Please, add your city!";
-  } else {
-    weatherResults.textContent = `You choose city: ${cityName}`;
+    return;
   }
 
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
@@ -26,8 +25,6 @@ getWeatherBtn.addEventListener("click", function () {
       const description = data.weather[0].description;
       const city = data.name;
       const iconCode = data.weather[0].icon;
-
-      const weatherResults = document.getElementById("weatherResults");
       const message = `There is ${temp}°C, ${description} in ${city}.`;
 
       weatherResults.innerHTML = `
