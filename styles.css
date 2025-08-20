@@ -13,13 +13,13 @@ body {
 
 #cityInput {
   flex: 1;
-  padding: 20px;
   padding: 10px;
-  border: 1px solid #e1ef20;
+  padding: 10px;
+  border: 4px solid #e1ef20;
 }
 
 button {
-  padding: 20px;
+  padding: 10px;
   border: none;
   background: #ecde16;
   color: #fff;
