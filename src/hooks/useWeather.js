@@ -1,12 +1,12 @@
-import { useState } from "react";
-import { json } from "stream/consumers";
-
-const API_KEY = "YOUR_API_KEY";
+import { useState, useEffect } from "react";
 
 export function useWeather() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [history, setHistory] = useState(
+    JSON.parse(localStorage.getItem("history")) || []
+  );
 
   const fetchWeather = async (city) => {
     setLoading(true);
@@ -18,6 +18,13 @@ export function useWeather() {
       if (!res.ok) throw new Error("City not found");
       const json = await res.json();
       setData(json);
+
+      const updatedHistory = [city, ...history.filter((c) => c !== city)].slice(
+        0,
+        5
+      );
+      setHistory(updatedHistory);
+      localStorage.setItem("history", JSON.stringify(updatedHistory));
     } catch (err) {
       setError(err.message);
       setData(null);
