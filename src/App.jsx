@@ -10,11 +10,27 @@ export default function App() {
       <h1>Weather Forecast</h1>
       <SearchBar onSearch={fetchWeather} />
 
-      {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
-      {data && <div><WeatherCard data={data} /></div>}
+      {history.length > 0 && (
+        <div className="mt-4 flex gap-2 flex-wrap justify-center">
+          {history.map((city, i) => (
+            <button
+              key={i}
+              onClick={() => fetchWeather(city)}
+              className="px-3 py-1 bg-white/20 rounded-lg"
+            >
+              {city}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {loading && <p className="mt-4">Loading...</p>}
+      {error && <p className="mt-4 text-red-300">{error}</p>}
+      {data && (
+        <div className="mt-6">
+          <WeatherCard data={data} />
+        </div>
+      )}
     </div>
   );
 }
-
-export default App

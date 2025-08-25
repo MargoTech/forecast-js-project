@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export function useWeather() {
   const [data, setData] = useState(null);
@@ -16,6 +18,7 @@ export function useWeather() {
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
       );
       if (!res.ok) throw new Error("City not found");
+
       const json = await res.json();
       setData(json);
 
@@ -33,5 +36,5 @@ export function useWeather() {
     }
   };
 
-  return { data, loading, error, fetchWeather };
+  return { data, loading, error, fetchWeather, history };
 }
