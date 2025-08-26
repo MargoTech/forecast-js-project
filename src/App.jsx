@@ -3,7 +3,7 @@ import SearchBar from "./components/SearchBar";
 import WeatherCard from "./components/WeatherCard";
 
 export default function App() {
-  const { data, loading, error, fetchWeather } = useWeather();
+  const { data, loading, error, fetchWeather, history } = useWeather();
 
   return (
     <div>
