@@ -6,8 +6,10 @@ export default function App() {
   const { data, loading, error, fetchWeather, history } = useWeather();
 
   return (
-    <div>
-      <h1>Weather Forecast</h1>
+    <div lassName="min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-blue-500 to-blue-700 text-white p-6">
+      <h1 className="text-4xl sm:text-5xl font-extrabold mb-6">
+        Weather Forecast
+      </h1>
       <SearchBar onSearch={fetchWeather} />
 
       {history.length > 0 && (
@@ -16,7 +18,7 @@ export default function App() {
             <button
               key={i}
               onClick={() => fetchWeather(city)}
-              className="px-3 py-1 bg-white/20 rounded-lg"
+              className="px-4 py-2 bg-white/20 hover:bg-white/40 rounded-full transition-colors"
             >
               {city}
             </button>
