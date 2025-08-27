@@ -6,7 +6,7 @@ export default function App() {
   const { data, loading, error, fetchWeather, history } = useWeather();
 
   return (
-    <div lassName="min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-blue-500 to-blue-700 text-white p-6">
+    <div className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-blue-500 to-blue-700 text-white p-6">
       <h1 className="text-4xl sm:text-5xl font-extrabold mb-6">
         Weather Forecast
       </h1>
