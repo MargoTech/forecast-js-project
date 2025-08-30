@@ -8,7 +8,6 @@ Search for any city worldwide and get **real-time weather data** instantly.
 ## 🖼 Screenshot
 
 ![Forecast App Screenshot](./assets/screenshot.png)  
-*Replace with your own screenshot placed in `assets/` folder.*
 
 ---
 
@@ -34,8 +33,7 @@ Search for any city worldwide and get **real-time weather data** instantly.
 
 ## ⚡ Live Demo
 
-[🌐 View Demo on Vercel/Netlify](https://your-demo-link.com)  
-*Replace with your actual live deployment link.*
+[🌐 View Demo on Netlify](https://68b07fafdb9374b93d2bdb20--forecats-app.netlify.app/)  
 
 ---
 
@@ -43,7 +41,7 @@ Search for any city worldwide and get **real-time weather data** instantly.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/forecast-app.git
+git clone https://github.com/MargoTech/forecast-js-project.git
 cd forecast-app
 Install dependencies:
 
