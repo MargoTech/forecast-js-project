@@ -1,6 +1,6 @@
 export default function ForecastCard({ day }) {
   const date = new Date(day.dt * 1000);
-  const options = { weekday: "short", day: " numeric", month: "short" };
+  const options = { weekday: "short", day: "numeric", month: "short" };
   const formattedDate = date.toLocaleDateString("en-US", options);
 
   return (

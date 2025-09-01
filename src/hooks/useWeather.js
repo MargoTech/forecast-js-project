@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export function useWeather() {
   const [data, setData] = useState(null);

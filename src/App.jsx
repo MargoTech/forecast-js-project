@@ -1,9 +1,11 @@
 import { useWeather } from "./hooks/useWeather";
 import SearchBar from "./components/SearchBar";
 import WeatherCard from "./components/WeatherCard";
+import ForecastCard from "./components/ForecastCard";
 
 export default function App() {
-  const { data, loading, error, fetchWeather, history } = useWeather();
+  const { data, loading, error, fetchWeather, history, forecast } =
+    useWeather();
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-b from-blue-500 to-blue-700 text-white p-6">
@@ -22,6 +24,14 @@ export default function App() {
             >
               {city}
             </button>
+          ))}
+        </div>
+      )}
+
+      {forecast.length > 0 && (
+        <div className="mt-6 flex gap-4 flex-wrap justify-center">
+          {forecast.map((day, i) => (
+            <ForecastCard key={i} day={day} />
           ))}
         </div>
       )}
