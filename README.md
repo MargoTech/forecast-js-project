@@ -5,12 +5,6 @@ Search for any city worldwide and get **real-time weather data** instantly.
 
 ---
 
-## 🖼 Screenshot
-
-![Forecast App Screenshot](./assets/screenshot.png)  
-
----
-
 ## 🚀 Features
 
 - 🌍 Search for any city worldwide  
