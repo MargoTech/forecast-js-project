@@ -33,7 +33,7 @@ Search for any city worldwide and get **real-time weather data** instantly.
 
 ## ⚡ Live Demo
 
-[🌐 View Demo on Netlify](https://68b5b1e4dc9050d3288559a9--forecats-app.netlify.app/)  
+[🌐 View Demo on Netlify](https://68b5baad37fec400084b287b--forecats-app.netlify.app/)  
 
 ---
 
