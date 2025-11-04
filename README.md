@@ -18,7 +18,8 @@ Search for any city worldwide and get **real-time weather data** instantly.
 - 🕑 History of last 5 searched cities  
 - 📱 Responsive and mobile-friendly design  
 - 🎨 Smooth gradients, hover effects, and shadows  
-- 🔑 Environment variable support for API key  
+- 🔑 Environment variable support for API key
+- 📅 5-day forecast
 
 ---
 
@@ -37,10 +38,3 @@ Search for any city worldwide and get **real-time weather data** instantly.
 
 ---
 
-📅 5-day forecast
-
-✨ Skeleton loader animation while fetching
-
-⚡ React Query for caching API requests
-
-💡 Tip: Keep your API key in .env and never commit it to GitHub.
