@@ -19,16 +19,16 @@ Search for any city worldwide and get **real-time weather data** instantly.
 
 ## 💻 Tech Stack
 
-- **React 18** – UI library  
-- **Vite** – Build tool  
-- **TailwindCSS 3.3** – Styling  
-- **OpenWeatherMap API** – Weather data  
+- React
+- Vite
+- TailwindCSS 3.3
+- OpenWeatherMap API
 
 ---
 
 ## ⚡ Live Demo
 
-[🌐 View Demo on Netlify](https://68b5baad37fec400084b287b--forecats-app.netlify.app/)  
+[🌐 View Demo](https://68b5baad37fec400084b287b--forecats-app.netlify.app/)  
 
 ---
 
